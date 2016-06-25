@@ -1,0 +1,21 @@
+<script type="text/javascript">
+var U=document.location.href.split("#");
+  var iD=U[1];
+   $.getJSON("http://antypovertytuban.hol.es/detail.php?jsoncallback=?&id="+iD,function(data){
+     var dataCount=data.length;
+     var showData="";
+     if(dataCount > 0){
+       for (var i = 0; i < data.length; i++) {
+          $("#detail-box").append("<iframe src='"+data[i].MAP+"' height='450' frameborder='0' allowfullscreen></iframe>");
+          showData +="<h1><i class='fa fa-send-o'></i><br />"+data[i].NAMA+"</h1>";
+          showData +="<div class='read-news'><p><div class=image-full><img src='image/"+data[i].IMG+"' alt=''></div>"+data[i].LONGDESC+"</p></div>";
+          $("#section-1").append(showData);
+       }
+     }
+   })
+</script>
+<div id="detail-box">
+</div>
+<div  id="section-1" class="col-4 animated fadeInUp">
+  <br /><br /><br /><br />
+</div>

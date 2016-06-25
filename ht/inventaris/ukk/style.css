@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Document */
+body{
+font-family:"Comic Sans MS", cursive; font-size:5px;
+
+}
+#menu{
+	width:100%; height:40px; float:left;
+}
+#menu ul {margin:0; padding:0; list-style:none;}
+#menu ul li {position:relative; float:left; width:109;}
+#menu ul li a{display:block; text-decoration:none; text-align:center; margin:0; padding:9px; color:#99FF33; border-right-style:inset; border-right-width:1px;}
+#menu ul li a:hover{color:#333333; background-color:#0F0; border-right-style:double; position:relative; }

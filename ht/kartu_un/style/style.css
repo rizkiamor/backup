@@ -1,0 +1,51 @@
+/* CSS Document */
+
+/* CSS Document */
+body{
+font-family:Arial, Helvatica, sans-serif; font-size:10px;
+}
+#header{
+width:1200px; height:200px; float:center; 
+background-color:#333; webkit-border-radius:20px; 
+}
+#judul{ font-size:80px; text-shadow: 5px 5px 5px  #0F6;  color:blue;
+position:inherit; padding-top:18px; padding-right:440px; 
+}
+#jud {
+	position:inherit;
+	padding-right:270px;
+	padding-top:2px;
+	text-shadow:green; color:#6C3; font-size:20px;
+}
+#jud0 {
+	position:inherit;
+	padding-right:170px;
+	padding-top:2px;
+	text-shadow:green; color:#6C3; font-size:20px;
+}
+
+
+#skat{
+width:1200px; height:10px; float:center; background-color:gray; 
+}
+#isi{
+ float:center; background-color:gray; width:1200px; height:70%;
+}
+#foter{
+width:1200px; height:30px; float:center; background-color:green; font:Arial; font-size:10px;
+}
+#text3{
+font:arial; font-size:15px;  color:white; padding-top:5px;
+}
+#text1{
+float:right  font:arial; font-size:10px;  background-color:#0F6; padding-top:5px; width:500px;
+}
+
+#sd1{
+float:left;  background-color:#F00; width:500px;
+}
+
+#kiri{float:left;width:460px;}
+#kanan{float:right;width:460px;}
+#layar{float:center; width:930px; height:600px; }
+

@@ -1,0 +1,35 @@
+/* melodyfont file css */
+@font-face {
+    font-family: "SmoothieShoppe";
+    src: url("fonts/SmoothieShoppe.ttf") format('truetype');
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Xiomara-Script";
+    src: url("fonts/Xiomara-Script.ttf") format('truetype');
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Sofia-Regular";
+    src: url("fonts/Sofia-Regular.otf") format('opentype');
+    font-style: normal
+}
+
+@font-face {
+    font-family: "GreatVibes-Regular";
+    src: url("fonts/GreatVibes-Regular.otf") format('opentype');
+    font-style: normal
+}
+
+@font-face {
+    font-family: "lane";
+    src: url("fonts/lane.ttf") format('truetype');
+    font-style: normal
+}
+
+@font-face {
+  font-family: "apple";
+  src:url("fonts/AppleGaramond-Light.ttf") format('truetype');
+}

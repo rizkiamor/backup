@@ -1,0 +1,84 @@
+<div id="second-box">
+<script type="text/javascript">
+$.getJSON("http://antypovertytuban.hol.es/pop.php?jsoncallback=?",function(data){
+	var dataCount=data.length;
+	if(dataCount > 0){
+	var showData="";
+	showData +="<div class='head-master'><div class='logo-3'></div><h1>TUBAN BANGET</h1><h5>Banyak hal yang akan anda temukan di sini</h5><div class='afro'><a href='#section-1' class='scroll'>Lihat Populer</a></div></div>";
+	showData +="<div class='head-master'><i class='fa fa-bell-o'></i><h1>WISATA POPULER</h1><h5>Temukan wisata populer di website ini</h5><div class='afro'><a href='#section-1' class='scroll'>Lihat Populer</a></div></div>";
+	for(var d=0;d<dataCount;d++){
+	 showData +="<div class='head-master'><div class='data-image' style='background:url(image/"+data[d].IMG+")no-repeat;background-size:cover;'></div><h1>"+data[d].NAMA+"</h1><h5>"+data[d].DESC+"</h5><div class='afro'><a href='?detail#"+data[d].ID+"'>Lihat Wisata ini</a></div></div>";
+	 $("#second-box").html(showData);
+	}
+}
+$(".scroll").each(function(){
+	$(this).click(function(event){
+		var $target=$(this).attr("href");
+		$('html, body').stop().animate({
+			scrollTop: $($target).offset().top - 90
+		}, 1500,'easeInOutExpo');
+		event.preventDefault();
+		return false;
+	});
+});
+});
+
+</script>
+</div>
+<div  id="section-1" class="second animated fadeInUp">
+	<h1>
+		<i class='fa fa-bell-o'></i><br />
+		POPULER
+	</h1>
+	<h5>Temukan Wisata Populer Di Tuban</h5>
+	<div class="col-3" onclick="window.location.href='?detail#1'">
+		<div class="clm">
+			<img src="image/goakbar.jpg" alt="" />
+			<h3>Goa Akbar</h3>
+			<p>
+				Goa Akbar, kebanggaan masyarakat Tuban. Goa yang penuh eksotis yang menyajikan daya tarik yang luar biasa
+			</p>
+		</div>
+
+		<div class="clm" onclick="window.location.href='?detail#3'">
+			<img src="image/gajahan.jpg" alt="" />
+			<h3>Gajahan Waterfall</h3>
+			<p>
+			Berkunjung ke kota Tuban belum komplit rasanya kalau belum mampir di Air Terjun Gajahan
+			</p>
+		</div>
+
+		<div class="clm" onclick="window.location.href='?detail#2'">
+			<img src="image/watuondo.jpg" alt="" />
+			<h3>Watu Ondo</h3>
+			<p>
+			Dari namanya yaitu Watu yang berarti batu, dan Ondo dalam bahasa indonesianya berarti tangga
+			</p>
+		</div>
+
+		<div class="clm" onclick="window.location.href='?detail#6'">
+			<img src="image/remen.jpg" alt="" />
+			<h3>Remen Beach</h3>
+			<p>
+			pemandangan pantai yang menakjubkan dengan pantai yang berwarna putih cerah dengan belahan danau yang unik
+			</p>
+		</div>
+
+		<div class="clm" onclick="window.location.href='?detail#4'">
+			<img src="image/goasuci.jpg" alt="" />
+			<h3>Goa Suci</h3>
+			<p>
+				Goa yang berstruktur batuan kapur ini bukan goa alam. Goa ini diyakini buatan manusia pada masa kejayaan kerajaan Majapahit.
+			</p>
+		</div>
+
+		<div class="clm" onclick="window.location.href='?detail#5'">
+			<img src="image/kwsb.jpg" alt="" />
+			<h3>Kwan Sing Bio</h3>
+			<p>
+				Klenteng ini merupakan salah satu Klenteng yang cukup ramai dikunjungi di wilayah Jawa Timur
+			</p>
+		</div>
+
+	</div>
+</div>

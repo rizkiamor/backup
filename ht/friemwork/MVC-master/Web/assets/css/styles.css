@@ -1,0 +1,43 @@
+body{margin:0;padding:0;background:#EEE;color:#555;font-family:Arial;font-size:14px}
+
+/* Contains the content to 960px wide */
+#container{position:relative;width:960px;margin:20px auto}
+	.section{position:relative;background:#FFF;margin-bottom:30px;padding:40px 80px;border-bottom:2px solid #CCC;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px}
+
+/* Typography */
+h1{font-size:48px;margin:0;padding-bottom:0;letter-spacing:-2px;font-weight:normal}
+h2{font-family:Arial;font-size:28px;margin-bottom:0;padding-bottom:0;letter-spacing:-1px;font-weight:normal}
+h3{}
+p,ol{margin-bottom:25px}
+p,li{line-height:30px}
+a{color:#4fbae9;text-decoration:underline}
+    a:hover{text-decoration:none}
+    a img{border:none}
+abbr{border-bottom:1px dotted #BBB;cursor:help}
+hr{margin:30px 0;padding:0;background:#FFF;color:#FFF;border:0;border-bottom:1px dotted #BBB}
+code,pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:4px 5px;border-radius:3px}
+
+/* Success message */
+.success{background:#080;color:#FFF;padding:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}
+
+/* Clear floated divs */
+.clear{clear:both}
+
+/* Profiler */
+#profiler{margin:20px auto;padding:20px 0;width:960px;background:#FFF;border-bottom:2px solid #CCC;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px}
+	#profiler h2{padding-left:80px}
+
+	#profiler-legend{margin:-38px 85px 0 0;font-size:11px;text-align:right}
+		.legend-item{padding:0 4px}
+		.legend-title{padding-right:10px}
+
+	#profiler-items{margin:40px 80px 20px;padding-right:120px;background:url(../img/profiler-bg.png?v2) repeat 5px 0}
+		#profiler .item{display:block;position:relative;margin-top:25px;min-width:2px;height:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}
+			.item-core{background:#BDC3C6}
+			.item-controller{background:#006594}
+			.item-action{background:#4AB2D6}
+			.item-helper{background:#F60}
+			.item-parse{background:#7BC342}
+			#profiler .item > span{position:absolute;top:-18px;left:0;font-size:11px;white-space:nowrap}
+				#profiler .item span span{visibility:hidden}
+				#profiler .item:hover span span{visibility:visible}

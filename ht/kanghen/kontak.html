@@ -1,0 +1,47 @@
+<div id="second-box">
+  <div class="head-master">
+    <div class='logo-3'></div>
+    <h1>TUBAN BANGET</h1>
+    <h5>Banyak hal yang akan anda temukan di sini</h5>
+    <div class='afro'><a href='#section-1' class='scroll'>Hubungi Kami</a></div>
+  </div>
+  <div class="head-master">
+    <i class='fa fa-user'></i>
+    <h1>KONTAK</h1>
+    <h5>Berikan komentar anda disini</h5>
+    <div class='afro'><a href='#section-1' class='scroll'>Hubungi Kami</a></div>
+  </div>
+</div>
+<div  id="section-1" class="col-4 animated fadeInUp">
+  <h1><i class='fa fa-user'></i><br />
+    HUBUNGI KAMI</h1>
+    <h5>Berikan Komentar Anda</h5>
+  <div class='submit'>
+    <form class="dataForm" action="http://antypovertytuban.hol.es/save.php?jsoncallback=?" method="post">
+    <input type='text' name='nama' placeholder="nama anda" required="required"/>
+    <input type='text' name='email' placeholder="email anda" required="required"/>
+    <textarea name='komentar'></textarea>
+    <input type="submit" value="Submit" />
+    <input type="button" value="Batal" />
+    </form>
+  </div>
+  <div class="your-comment"><i class="fa fa-comment"></i> Komentar Anda</div>
+  <div class="read-comment"></div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    function postData(){
+      $.getJSON("http://antypovertytuban.hol.es/comment.php?jsoncallback=?",function(data){
+        var dataCount=data.length;
+        if(dataCount > 0){
+          var showData="";
+          for (var i = 0; i < dataCount; i++) {
+           showData +="<div class='rcm'><div class=from><i class='fa fa-comments'></i> "+data[i].NAMA+" <small><i>"+data[i].EMAIL+"</i></small></div>"+data[i].COMMENT+"</div>";
+          }
+          $(".read-comment").html(showData);
+        }
+      });
+    }
+    setInterval(function(){postData()},2000);
+  });
+</script>
